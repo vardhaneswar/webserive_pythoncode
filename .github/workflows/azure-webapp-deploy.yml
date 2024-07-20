@@ -4,7 +4,7 @@ env:
   AZURE_WEBAPP_NAME: dhaappsapp  
   AZURE_WEBAPP_PACKAGE_PATH: '.'      
   PYTHON_VERSION: '3.10'      
-  STAGING_SLOT_NAME: 'dhaappsapp-staging'       
+  STAGING_SLOT_NAME: 'staging'       
 
 on:
   push:
