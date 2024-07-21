@@ -3,8 +3,7 @@ name: Deploy to Azure Web App
 env:
   AZURE_WEBAPP_NAME: dhaappacicd  
   AZURE_WEBAPP_PACKAGE_PATH: '.'      
-  PYTHON_VERSION: '3.10'      
-  STAGING_SLOT_NAME: 'staging'       
+  PYTHON_VERSION: '3.10'          
 
 on:
   push:
@@ -55,5 +54,5 @@ jobs:
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           slot-name: ${{ env.STAGING_SLOT_NAME }}
-          publish-profile: ${{ secrets.dhaappacicd_secret_staging }}
+          publish-profile: ${{ secrets.dhaappacicd_secret }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
